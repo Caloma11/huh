@@ -13,10 +13,6 @@
   <body>
     <%= yield %>
 
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-    
-
 <div
   id="map"
   style="width: 100%;
@@ -24,6 +20,10 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ><%= @markers %></div>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    
+
 
 
 
